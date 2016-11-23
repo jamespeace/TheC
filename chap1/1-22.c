@@ -10,34 +10,31 @@
 
 typedef struct _node *pnode;
 
-struct _node{
-	char value[MAX];
-	pnode next;
+struct _node {
+    char value[MAX];
+    pnode next;
 }node;
 
 pnode head, tail;
 
 void
-int main(void)
-{
-	int n, i, p;
-	char s[MAX];
-	n = i = p = 0;
-	printf("The length of one line ?");
-	scanf("%d", &n);
-	
-	if(n < MAX)
-		while((c=getchar()) != EOF || c != '\n') 
-		{
-			while(i < n) 
-			{
-				if(c == '\t' || c == ' ')				
-			}
-		}
-	else
-		printf("ERROR!the length is too long");
+int main(void) {
+    int n, i, p;
+    char s[MAX];
+    n = i = p = 0;
+    printf("The length of one line ?");
+    scanf("%d", &n);
 
-	return 0;
+    if (n < MAX)
+        while ((c=getchar()) != EOF || c != '\n') {
+            while (i < n) {
+                if (c == '\t' || c == ' ')
+                }
+        }
+    else
+        printf("ERROR!the length is too long");
+
+    return 0;
 }
 
 
