@@ -13,9 +13,10 @@ int main(void)
 	int found = 0;
 
 	while (getline(line, MAXLINE) > 0)
-		if (strindex(line, pattern) > 0) {
-
+		if (strindex(line, pattern) >= 0) {
+			printf("%s", line);
 		}
+	return 0;
 }
 
 /* getline:  get line into s, return length */
@@ -38,6 +39,11 @@ int strindex(char s[], char t[])
 	int i, j, k;
 
 	for (i = 0; s[i] != '\0'; i++) {
-		for (j=i, k=0; t[k]
+		for (j=i, k=0; (t[k] == s[j]) != '\0';j++, k++)
+			;
+		if(t[k] == '\0')
+			return i;
 	}
+	return -1;
 }
+
