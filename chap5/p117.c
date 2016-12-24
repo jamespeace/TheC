@@ -2,7 +2,7 @@
 #include <string.h>
 #define MAXLINE 1000
 
-int getline(char *line, int max);
+int getlines(char *line, int max);
 
 /* find:  print lines that match pattern from 1st arg */
 int main(int argc, char *argv[])
@@ -40,4 +40,16 @@ int main(int argc, char *argv[])
 			}
 		}
 	return found;
+}
+
+int getlines(char *line, int maxline)
+{
+	int c, i = 0;
+
+	while (i < maxline - 1 && (c = getchar()) != EOF && c != '\n')
+		line[i++] = c;
+	if (c == '\n')
+		line[i++] = c;
+	line[i] = '\0';
+	return i;
 }
