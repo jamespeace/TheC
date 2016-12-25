@@ -1,40 +1,27 @@
-/*
- * 2016/12/25 01:00  手痛因為喜歡亂躺！this exaple appeared in ex 1-22 too.
- * 					 寫一半了！過年前把整本都寫完吧！還剩一個月！加油，跟自己比較
+/* I don't know how to code.
+ * Remain to tomorrow.
+ * 2016/12/25 13:46
  */
-#include<stdio.h>
-#define TABINC 8
+#include <stdio.h>
+#include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-    int nb,nt,pos,c;
+int main(int argc, char *argv[])
+{
+	int c, tabinc, argcount = --argc;
+	char **argvector = ++argv;
 
-    nb = 0;
-    nt = 0;
+	if (argcount > 0)
+		tabinc = (*argvector)[0] - '0';
+	else
+		tabinc = 8;
+	for (i = 0; (c = getchar()) ! = EOF; i++) {
+		if (i > tabinc) {
+			n = (--argcount > 0) ?(*++argvector)[0] - '0' : 8;
+			i = 1;
+		}
 
-    for (pos=1;(c=getchar())!=EOF;++pos)
-        if ( c == ' ') {
-            if ((pos % TABINC) != 0)
-                ++nb;
-            else {
-                nb = 0;
-                ++nt;
-            }
-        } else {
-            for ( ; nt > 0 ; --nt)
-                putchar('\t');
-            if ( c == '\t')
-                nb = 0;
-            else
-                for ( ; nb > 0; --nb)
-                    putchar(' ');
-
-            putchar(c);
-
-            if (c == '\n')
-                pos = 0;
-            else if ( c == '\t')
-                pos = pos + ( TABINC - (pos -1) % TABINC) - 1;
-        }
-
-    return 0;
+		if (c == '\t') {
+			
+		}
+	}
 }
