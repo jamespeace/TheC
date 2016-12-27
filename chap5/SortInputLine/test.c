@@ -2,11 +2,11 @@
 
 int main(void)
 {
-	char c;
+    char c;
 
-	while ((c = getchar()) != EOF)
-		printf("QQ\n");
-	printf("I am free!\n");
+    while ((c = getchar()) != EOF)
+        printf("QQ\n");
+    printf("I am free!\n");
 
-	return 0;
+    return 0;
 }
