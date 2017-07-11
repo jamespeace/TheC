@@ -1,0 +1,6 @@
+unbuf_cat() 100000 times
+nsec:0.240000
+buf_cat() 100000 times
+nsec:0.246000
+fcat() 100000 times
+nsec:0.266000
